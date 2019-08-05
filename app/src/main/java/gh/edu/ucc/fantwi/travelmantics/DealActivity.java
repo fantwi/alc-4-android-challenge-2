@@ -67,12 +67,12 @@ public class DealActivity extends AppCompatActivity {
         if (FirebaseUtil.isAdmin) {
             menu.findItem(R.id.delete_menu).setVisible(true);
             menu.findItem(R.id.save_menu).setVisible(true);
-            enabledEditTexts(true);
+            enableEditTexts(true);
         }
         else {
             menu.findItem(R.id.delete_menu).setVisible(false);
             menu.findItem(R.id.save_menu).setVisible(false);
-            enabledEditTexts(false);
+            enableEditTexts(false);
         }
         return true;
     }
@@ -109,7 +109,7 @@ public class DealActivity extends AppCompatActivity {
         txtTitle.requestFocus();
     }
 
-    private void enabledEditTexts(boolean isEnabled) {
+    private void enableEditTexts(boolean isEnabled) {
         txtTitle.setEnabled(isEnabled);
         txtDescription.setEnabled(isEnabled);
         txtPrice.setEnabled(isEnabled);
